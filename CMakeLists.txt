@@ -1,3 +1,4 @@
+if(CONFIG_QMSI)
 zephyr_library()
 
 zephyr_compile_definitions(                                  ENABLE_EXTERNAL_ISR_HANDLING)
@@ -50,3 +51,4 @@ zephyr_library_sources_ifdef(CONFIG_SOC_FLASH_QMSI       drivers/flash/qm_flash.
 zephyr_library_sources_ifdef(CONFIG_SOC_WATCH            drivers/soc_watch.c)
 zephyr_library_sources_ifdef(CONFIG_UART_QMSI            drivers/uart/qm_uart.c)
 zephyr_library_sources_ifdef(CONFIG_WDT_QMSI             drivers/wdt/qm_wdt.c)
+endif()
